@@ -85,6 +85,8 @@ class CSModel():
         prompt_formatter: Optional[PromptFormatter] = None,
         formatted_hf_ds: Optional[Dataset] = None,
         num_proc: int = 3,
+        trainer_class: type = None,
+        trainer_kwargs: Optional[dict] = None,
     ):
         """
         Fine tune a model using the provided CSData object data
@@ -110,6 +112,9 @@ class CSModel():
                             used in cases where custom formatting is desired (e.g. multicell
                             tasks where more complex formatting is needed).
             num_proc: number of processes to use for tokenization. Defaults to 3.
+            trainer_class: optional custom Trainer class (e.g., HCETrainer for hierarchical loss).
+                          If None, uses standard Huggingface Trainer.
+            trainer_kwargs: optional dictionary of additional kwargs to pass to trainer_class constructor.
         Return:
             None: an updated CSModel is generated in-place
         """
@@ -206,15 +211,24 @@ class CSModel():
             print(f"Selecting {max_eval_samples} samples of eval dataset to shorten validation loop.")
             eval_dataset = eval_dataset.select(sampled_eval_indices)
         
-        # Define Trainer
-        trainer = Trainer(
-            model=model,
-            args=train_args,
-            data_collator=data_collator,
-            train_dataset=train_dataset,
-            eval_dataset=eval_dataset,
-            tokenizer=self.tokenizer
-        )
+        # Define Trainer - use custom trainer class if provided
+        if trainer_class is None:
+            trainer_class = Trainer
+        
+        trainer_init_kwargs = {
+            "model": model,
+            "args": train_args,
+            "data_collator": data_collator,
+            "train_dataset": train_dataset,
+            "eval_dataset": eval_dataset,
+            "tokenizer": self.tokenizer
+        }
+        
+        # Add any additional trainer kwargs
+        if trainer_kwargs is not None:
+            trainer_init_kwargs.update(trainer_kwargs)
+        
+        trainer = trainer_class(**trainer_init_kwargs)
         trainer.train()
         print(f"Finetuning completed. Updated model saved to disk at: {output_dir}")
 
