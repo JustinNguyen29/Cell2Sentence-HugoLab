@@ -7,6 +7,9 @@ data
 tutorialdata
 calc
 figures
+outputs
+lung.h5ad
+lung_hce_balanced_results
 
 
 ###########################################################
