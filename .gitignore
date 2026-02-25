@@ -10,6 +10,7 @@ figures
 outputs
 lung.h5ad
 lung_hce_balanced_results
+lung_hce_end_to_end_results
 
 
 ###########################################################
