@@ -1,0 +1,21 @@
+{
+  "data_path": "/home/hugolab/Documents/Cell2Sentence-HugoLab/Cell2Sentence-HugoLab/lung.h5ad",
+  "output_dir": "/home/hugolab/Documents/Cell2Sentence-HugoLab/Cell2Sentence-HugoLab/lung_hce_integrated_results",
+  "model_name": "vandijklab/C2S-Pythia-410m-human-immune",
+  "batch_size": 8,
+  "learning_rate": 0.0001,
+  "num_epochs": 10,
+  "early_stopping_patience": 3,
+  "filter_unknown": true,
+  "random_seed": 42,
+  "min_cells_per_type": 10,
+  "max_cells_per_type": 300,
+  "num_genes_text": 30,
+  "max_token_length": 128,
+  "train_val_test_split": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "use_mixed_precision": true
+}
