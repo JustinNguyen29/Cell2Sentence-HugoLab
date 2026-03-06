@@ -32,21 +32,21 @@ KEY CORRECTIONS IN THIS VERSION
 
 TRAINING RESULTS
 ================
-Final Train Loss:       0.0777
-Final Val Loss:         0.7073
-Final Val Accuracy:     0.7922
+Final Train Loss:       0.0791
+Final Val Loss:         0.8186
+Final Val Accuracy:     0.7863
 
 TEST SET PERFORMANCE
 ====================
-Test Loss:              0.7687
-Test Accuracy:          0.7904
+Test Loss:              0.8052
+Test Accuracy:          0.7855
 
 Top 5 Cell Types by F1 Score:
   SMG mucous                              : F1=0.9900 (P=0.9933, R=0.9867)
-  Plasma cells                            : F1=0.9868 (P=0.9803, R=0.9933)
-  Neuroendocrine                          : F1=0.9703 (P=0.9608, R=0.9800)
-  Plasmacytoid DCs                        : F1=0.9592 (P=0.9792, R=0.9400)
-  EC aerocyte capillary                   : F1=0.9571 (P=0.9477, R=0.9667)
+  Plasma cells                            : F1=0.9766 (P=0.9799, R=0.9733)
+  Mesothelium                             : F1=0.9697 (P=0.9796, R=0.9600)
+  Neuroendocrine                          : F1=0.9608 (P=0.9423, R=0.9800)
+  Plasmacytoid DCs                        : F1=0.9600 (P=0.9600, R=0.9600)
 
 KEY ADVANTAGES OF CORRECTED HCE LOSS
 ====================================
