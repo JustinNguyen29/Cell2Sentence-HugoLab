@@ -1,0 +1,94 @@
+child,parent
+Blood vessels,Endothelial
+EC arterial,Blood vessels
+Lymphoid,Immune
+T cell lineage,Lymphoid
+CD8 T cells,T cell lineage
+Myeloid,Immune
+Macrophages,Myeloid
+Alveolar macrophages,Macrophages
+Alveolar Mph CCL3+,Alveolar macrophages
+Smooth muscle,Stroma
+SM activated stress response,Smooth muscle
+Fibroblast lineage,Stroma
+Myofibroblasts,Fibroblast lineage
+Interstitial macrophages,Macrophages
+Interstitial Mph perivascular,Interstitial macrophages
+Dendritic cells,Myeloid
+Plasmacytoid DCs,Dendritic cells
+Monocytes,Myeloid
+Classical monocytes,Monocytes
+Airway epithelium,Epithelial
+Basal,Airway epithelium
+Suprabasal,Basal
+DC1,Dendritic cells
+Alveolar epithelium,Epithelial
+AT1,Alveolar epithelium
+Multiciliated lineage,Airway epithelium
+Multiciliated,Multiciliated lineage
+Multiciliated (non-nasal),Multiciliated
+Submucosal Gland,Epithelial
+Submucosal Secretory,Submucosal Gland
+SMG serous,Submucosal Secretory
+SMG serous (bronchial),SMG serous
+EC capillary,Blood vessels
+EC general capillary,EC capillary
+Multiciliated (nasal),Multiciliated
+B cell lineage,Lymphoid
+B cells,B cell lineage
+EC aerocyte capillary,EC capillary
+T cells proliferating,T cell lineage
+Lymphatic EC,Endothelial
+Lymphatic EC mature,Lymphatic EC
+Rare,Airway epithelium
+Ionocyte,Rare
+Alveolar Mph MT-positive,Alveolar macrophages
+DC2,Dendritic cells
+Secretory,Airway epithelium
+Club,Secretory
+Club (nasal),Club
+Smooth muscle FAM83D+,Smooth muscle
+Plasma cells,B cell lineage
+Hillock-like,Basal
+EC venous,Blood vessels
+EC venous systemic,EC venous
+Migratory DCs,Dendritic cells
+Basal resting,Basal
+Lymphatic EC differentiating,Lymphatic EC
+Non-classical monocytes,Monocytes
+Transitional Club-AT2,Secretory
+AT0,Transitional Club-AT2
+Fibroblasts,Fibroblast lineage
+Adventitial fibroblasts,Fibroblasts
+AT2,Alveolar epithelium
+AT2 proliferating,AT2
+Alveolar Mph proliferating,Alveolar macrophages
+Pericytes,Fibroblasts
+Alveolar fibroblasts,Fibroblasts
+Neuroendocrine,Rare
+SMG serous (nasal),SMG serous
+Peribronchial fibroblasts,Fibroblasts
+Subpleural fibroblasts,Fibroblasts
+Club (non-nasal),Club
+CD4 T cells,T cell lineage
+SMG duct,Submucosal Secretory
+SMG mucous,Submucosal Secretory
+Goblet,Secretory
+Goblet (nasal),Goblet
+Goblet (bronchial),Goblet
+Mast cells,Myeloid
+EC venous pulmonary,EC venous
+Goblet (subsegmental),Goblet
+Mesothelium,Stroma
+Innate lymphoid cell NK,Lymphoid
+NK cells,Innate lymphoid cell NK
+Deuterosomal,Multiciliated lineage
+pre-TB secretory,Transitional Club-AT2
+Monocyte-derived Mph,Interstitial macrophages
+Tuft,Rare
+Lymphatic EC proliferating,Lymphatic EC
+Hematopoietic stem cells,Immune
+Endothelial,
+Immune,
+Stroma,
+Epithelial,
