@@ -183,7 +183,7 @@ class HCETrainer(Trainer):
 
             # Propagate probability mass upward (paper Eq. 4):
             #   s[b, i] = Σ_j p[b, j] * R[i, j]  →  S = P @ R^T
-            adjusted = torch.matmul(ct_probs, R.T)         # (N_ct, C)
+            adjusted = torch.matmul(ct_probs, R.T.to(ct_probs.dtype))  # (N_ct, C)
 
             # Log with ε = 1e-8 for numerical stability (paper Eq. 7)
             log_adjusted = torch.log(adjusted + 1e-8)      # (N_ct, C)
@@ -303,14 +303,16 @@ def build_reachability_matrix_from_ontology(
         if child in cell_type_to_idx and parent in cell_type_to_idx:
             reachability[cell_type_to_idx[parent], cell_type_to_idx[child]] = 1
 
-    # Transitive closure (Floyd-Warshall)
-    for k in range(num_classes):
-        for i in range(num_classes):
-            if reachability[i, k] == 0:
-                continue
-            for j in range(num_classes):
-                if reachability[k, j]:
-                    reachability[i, j] = 1
+    # Transitive closure via NumPy boolean matrix squaring.
+    # Repeated squaring reaches full closure in O(log n) matrix multiplications,
+    # each O(n²) with NumPy BLAS — far faster than the O(n³) Python loop.
+    prev = reachability.copy()
+    while True:
+        next_ = np.clip(prev @ prev, 0, 1)
+        if np.array_equal(next_, prev):
+            break
+        prev = next_
+    reachability = next_
 
     return reachability
 

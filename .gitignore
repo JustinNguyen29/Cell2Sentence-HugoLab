@@ -9,11 +9,24 @@ calc
 figures
 outputs
 lung.h5ad
+liver.h5ad
+brain.h5ad
 lung_hce_balanced_results
 lung_hce_end_to_end_results
 lung_hce_end_to_end_results_corrected
 lung_hce_integrated_results
 lung_hce_option_a_results
+lung_hce_v3_results
+multi_tissue_results
+multi_tissue_v2_results
+
+# Large local datasets
+All_cells.h5ad
+brain-all-neurons.h5ad
+brain_neurons_processed.h5ad
+brain_new.h5ad
+census_data/
+lab-data/
 
 
 ###########################################################
