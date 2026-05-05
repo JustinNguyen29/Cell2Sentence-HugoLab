@@ -19,6 +19,7 @@ lung_hce_option_a_results
 lung_hce_v3_results
 multi_tissue_results
 multi_tissue_v2_results
+multi_tissue_v3_results
 
 # Large local datasets
 All_cells.h5ad
