@@ -20,6 +20,13 @@ lung_hce_v3_results
 multi_tissue_results
 multi_tissue_v2_results
 multi_tissue_v3_results
+multi_tissue_v5_results
+multi_tissue_v6_comparison_results
+multi_tissue_lr_baseline_results
+
+# Large model files
+*.pt
+*.pth
 
 # Large local datasets
 All_cells.h5ad
