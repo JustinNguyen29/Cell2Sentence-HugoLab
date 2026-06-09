@@ -214,3 +214,7 @@ notebooks
 scripts
 tutorials/wandb
 example_*.py
+
+# Cell Ontology download (large; fetched on demand)
+ontology/
+*.obo
