@@ -19,7 +19,7 @@ Complete training script for lung.h5ad dataset:
 - Trains Cell2Sentence model with HCE loss
 - Ready to run once dependencies are installed
 
-#### C. `hce_example_simple.py`
+#### C. `examples/hce_example_simple.py`
 Minimal example showing how to use HCE loss:
 - Simple demonstration of the key code changes needed
 - Good starting point for understanding the integration
@@ -58,7 +58,7 @@ source c2s-justin/bin/activate
 ### 2. Run Simple Example
 
 ```bash
-python hce_example_simple.py
+python examples/hce_example_simple.py
 ```
 
 This will demonstrate the reachability matrix construction.
@@ -149,8 +149,8 @@ All files are in: `/home/hugolab/Documents/Cell2Sentence-HugoLab/Cell2Sentence-H
 
 - **Source code**: `src/cell2sentence/hce_trainer.py`
 - **Training script**: `train_lung_hce.py`
-- **Simple example**: `hce_example_simple.py`
-- **Full documentation**: `HCE_INTEGRATION_README.md`
+- **Simple example**: `examples/hce_example_simple.py`
+- **Full documentation**: `docs/hce/HCE_INTEGRATION_README.md`
 - **Dataset**: `lung.h5ad`
 - **Virtual env**: `c2s-justin/`
 
@@ -164,7 +164,7 @@ All files are in: `/home/hugolab/Documents/Cell2Sentence-HugoLab/Cell2Sentence-H
 
 2. **Test the simple example**:
    ```bash
-   python hce_example_simple.py
+   python examples/hce_example_simple.py
    ```
 
 3. **Run training on lung.h5ad**:

@@ -219,3 +219,6 @@ example_*.py
 # Cell Ontology download (large; fetched on demand)
 ontology/
 *.obo
+
+# Claude Code local worktrees
+.claude/worktrees/

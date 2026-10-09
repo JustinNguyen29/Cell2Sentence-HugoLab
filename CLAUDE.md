@@ -92,10 +92,15 @@ make html                         # sphinx docs → docs/build/
 
 ## Notebooks & experiments
 
-Most active work happens in **Jupyter notebooks at the repo root**, not in the package. They are versioned by filename suffix (`multi_tissue_hce_v2.ipynb` … `v10`, `lung_hce_*`); higher version numbers are newer iterations. The canonical hierarchy-fixed reference notebook is `lung_hce_end_to_end_training_CORRECTED.ipynb`.
+Most active work happens in **Jupyter notebooks under `experiments/`**, not in the package (see `experiments/README.md` for an index):
+- `experiments/lung/` — lung experiments; the canonical hierarchy-fixed reference is `lung_hce_end_to_end_training_CORRECTED.ipynb`.
+- `experiments/multi_tissue/` — current multi-tissue work (`multi_tissue_hce_v11_comparison.ipynb` + `multi_tissue_v11_config.py`, v10, LR baseline, diagnostics).
+- `experiments/multi_tissue/archive/` — superseded versions v1–v9.
+
+Notebooks are versioned by filename suffix; higher numbers are newer. Each notebook's first code cell `chdir`s to the repo root (found via `setup.cfg`) and adds the notebook's own directory to `sys.path`, so all data/result paths stay **relative to the repo root**. Keep that cell in new notebooks. Don't create top-level `notebooks/` or `scripts/` dirs — `.gitignore` ignores those names.
 
 Experiment outputs land in `*_results/` directories (e.g. `multi_tissue_v9_results/`, `lung_hce_end_to_end_results_corrected/`). These directories, large `.h5ad` datasets, and `*.pt`/`*.pth` model files are git-ignored — do not commit them. The primary datasets (`lung.h5ad`, `brain*.h5ad`, `All_cells.h5ad`, `census_data/`, `lab-data/`) are large local files excluded from git.
 
 ## Standalone docs in this repo
 
-Several Markdown files document the HCE work and notebook reviews; consult them before changing related code: `HCE_INTEGRATION_README.md`, `HIERARCHY_FIX_SUMMARY.md`, `HIERARCHY_FIX_QUICK_REF.md`, `BIOLOGICAL_SIGNIFICANCE.md`, `NOTEBOOK_ANALYSIS.md`, `QUICKSTART.md`.
+Markdown docs for the HCE work live in `docs/hce/`; consult them before changing related code: `HCE_INTEGRATION_README.md`, `HIERARCHY_FIX_SUMMARY.md`, `HIERARCHY_FIX_QUICK_REF.md`, `BIOLOGICAL_SIGNIFICANCE.md`, `NOTEBOOK_ANALYSIS.md`, `QUICKSTART.md`. Standalone scripts (`hce_example_simple.py`, `download_model.py`) are in `examples/`.
